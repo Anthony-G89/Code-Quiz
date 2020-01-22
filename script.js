@@ -5,29 +5,29 @@ var count= 10;
 
 
 
+
 startButton.addEventListener("click",startGame)
 
 function startGame(){
 startButton.classList.add('hide');
 questionContaioner.classList.remove('hide');
+timer.classList.remove ('hide');
+
  interval= setInterval(function(){
      count -= 1;
-     timer.textContent= ("timer: " + count);
+     //for( var i=0; i<count; i--)
+     timer.textContent= ("TIMER: " + count);
 
      if(count === 0){
-         clearInterval("Time is up");
+         clearInterval();
      };
     
     
 },1000);
-
-
 }
 
 function timer(){
-    if(count === 0){
-        clearInterval(count);
-    }
+    
 }
 
 function setNextQuestion(){
