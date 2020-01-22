@@ -1,6 +1,7 @@
 var startButton= document.querySelector('#start-button');
 var questionContaioner= document.querySelector('#question-container');
 var timer= document.querySelector('#count-down');
+var nextBtn= document.querySelector('#next-button');
 var count= 10;
 
 
@@ -12,6 +13,7 @@ function startGame(){
 startButton.classList.add('hide');
 questionContaioner.classList.remove('hide');
 timer.classList.remove ('hide');
+nextBtn.classList.remove('hide');
 
  interval= setInterval(function(){
      count -= 1;

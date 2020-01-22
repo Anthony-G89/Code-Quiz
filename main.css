@@ -13,15 +13,14 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(168, 236, 236);
+    background-image: url("../Pictures/email-pattern.png")
 }
 
 .container{
     width: 500px;
-    
-    background-color: white;
+    background-color: rgb(218, 221, 224);
     border-radius: 15px;
-    padding: 20px;
+    padding: 45px;
     box-shadow: 5px 10px;
     
 
@@ -37,11 +36,30 @@ body{
   
 }
 
+li{
+    list-style-type: upper-alpha;
+    color: black;
+}
+
+#start-button{
+    width: 95%;
+    padding: 10px 0px;
+    font-size: x-large;
+    background-color: green;
+}
+
+#next-button{
+    background-color: limegreen;
+    width: 18%;
+    padding: 5px;
+}
+
 .button{
     margin: 5px;
+    width: 100%;
     border-radius: 10px;
     padding: 5px 11px;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.568);
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -65,9 +83,8 @@ body{
 }
 
 #count-down{
-    color: black;
+    color: red;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    padding-right: 10px;
     margin-bottom: 90VH;
 }
