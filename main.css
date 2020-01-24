@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: cursive;
 }
 
 body{
@@ -59,11 +59,11 @@ li{
     color: black;
 }
 
-#start-button{
-    width: 95%;
-    padding: 10px 0px;
+#start{
+    width: 40%;
+    padding: 35px 11px;
     font-size: x-large;
-    background-color: green;
+    background-color: rgb(219, 219, 219);
 }
 
 #next-button{
@@ -100,7 +100,7 @@ li{
     align-content: center;
 }
 
-#count-down{
+#timer{
     color: red;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;

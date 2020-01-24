@@ -14,11 +14,32 @@
 </head>
 
 <body>
-   
-    <div class="container">
+    <div id="timer"></div>
+    <div id="start" class="container btn btn">Start Quiz
+        <p id="intro">Try to answer the following code related questions within the time limit.
+            Keep in mind that incorrect answers will penalize your score time by six seconds.<br>My the force be with you!</p>
+    </div>
+    
+
+    <div id="quiz" class="container" style="display: none;">
+    <div id="questions"></div>
+    <div id="controls">
+        <div class="choiceA" id="A">A</div>
+        <div class="choiceB" id="B">B</div>
+        <div class="choiceC" id="C">C</div>
+        <div class="choiceD" id="D">D</div>
+    </div>
+    
+    </div>
+
+    <div id="results" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+ <!-- <div class="container">
         <h2 id="main">Code Quiz</h2>
          <p id="intro">Try to answer the following code related questions within the time limit.
-             Keep in mind that incorrect answers will penalize your score time by ten seconds.<br>My the force be with you!</p>
+             Keep in mind that incorrect answers will penalize your score time by six seconds.<br>My the force be with you!</p>
         <div id="question-container" class="hide">
             <div class="question">What does HTML stand for __________.</div>
             <div id="answer-buttons">
@@ -31,15 +52,11 @@
             </div>
         </div>
         <div class="controls">
-            <button id="start-button" class="start-button button">Start Test</button>
+            <button id="start-button" class="start-button button">Start Quiz</button>
             <button id="next-button" class="next-button button hide ">Next</button>
         </div>
 
 
     </div>     
-    <h3 id="count-down" class="hide">TIMER:</h3>
-
-    <script src="script.js"></script>
-</body>
-
+    <h3 id="count-down" class="hide">TIMER:</h3> -->
 </html>
