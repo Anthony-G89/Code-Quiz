@@ -2,7 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: cursive;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
 }
 
 body{
@@ -42,6 +43,7 @@ body{
     font-size: 22px;
     font-weight: bold;
     color: black;
+    margin-top: 14px;
 }
 
 .question{
@@ -60,11 +62,15 @@ li{
 }
 
 #start{
-    width: 40%;
-    padding: 35px 11px;
+    width: 31%;
+    padding: 43px 11px;
     font-size: x-large;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(228, 186, 186);
 }
+
+
+
+
 
 #next-button{
     background-color: limegreen;

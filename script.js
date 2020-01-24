@@ -1,7 +1,7 @@
 var timer = document.querySelector("#timer");
 var start = document.querySelector("#start");
 var quiz = document.querySelector("#quiz");
-var questions = document.querySelector("#questions");
+var questionsElement = document.querySelector("#questions");
 var choiceA = document.querySelector("#A");
 var choiceB = document.querySelector("#B");
 var choiceC = document.querySelector("#C");
@@ -48,7 +48,6 @@ var questions = [
 start.addEventListener("click",startGame)
 
 function startGame(){
-    
  interval= setInterval(function(){
      count -= 1;
      timer.textContent= ("TIMER: " + count);
@@ -57,16 +56,28 @@ function startGame(){
          clearInterval(interval);
      };
     
-    
-},1000);
-}
 
+},1000);
+
+start.style.display = 'none';
+
+
+renderQuestion();
+
+}
 
 function renderQuestion(){
     var q = questions[runningQuestion];
-    questions.innerHTML = "<p>" + q.question1 + "</p>";
-    choiceA.innerHTML = q.choices
-    console.log(questions1);
+    for(var i=0; i < q.choices.length; i++){
+        
+    }
+
+    questionsElement.innerHTML = "<p>" + q.question1 + "</p>";
+    choiceA.innerHTML = "<p>" + q.choices + "</p>";
+    
+    quiz.style.display= 'block';
+   
+
     
 }
 
