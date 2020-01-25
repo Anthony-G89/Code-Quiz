@@ -2,41 +2,40 @@ var timer = document.querySelector("#timer");
 var start = document.querySelector("#start");
 var quiz = document.querySelector("#quiz");
 var questionsElement = document.querySelector("#questions");
-var choiceA = document.querySelector("#A");
-var choiceB = document.querySelector("#B");
-var choiceC = document.querySelector("#C");
-var choiceD = document.querySelector("#D");
+var choices = document.querySelector(".choices");
 var results = document.querySelector("#results");
+var choicesClass = document.querySelector(".choicesClass")
+
 
 
 var runningQuestion = 0;
-var count = 4;
+var count = 70;
 
 var questions = [
     {
-        question1: "What does HTML stand for __________.",
-        choices: ["Hypertext Markup Language", "Hyper Mark Language", "JSON", "Height"],
-         answer: "A"
+        question: "What does HTML stand for __________.",
+        choices: ["A. Hypertext Markup Language", "B. Hyper Mark Language", "C. JSON", "D. Height"],
+         answer: "A. Hypertext Markup Language"
     },
     {
-        question2: "What does CSS stand for _____________.",
-         choices: ["Cascading Style Sheets", "Cascading Sheets Style", "Cascading Sheep style", "Computer Style Sheets"],
-         answer: "A"
+        question: "What does CSS stand for _____________.",
+         choices: ["A. Cascading Style Sheets", "B. Cascading Sheets Style", "C. Cascading Sheep style", "D. Computer Style Sheets"],
+         answer: "A. Cascading Style Sheets"
     },
     {
-        question3: "Choose the correct HTML element for the largest heading:",
-        choices: ["<h6>", "<head>", "<heading>", "<h1>"],
-        answer: "D"
+        question: "Choose the correct HTML element for the largest heading:",
+        choices: [" A. <h6>", "B. <head>", "C. <heading>", "D. <h1>"],
+        answer: "D. <h1>"
     },
     {
-        question4: "What is the correct JavaScript syntax to change the contact of the HTML element below?",
-        choices: ["document.getElementById(\"demo\").innerHTML = Hello World!", "document.getElement(\"p\").innerHTML = Hello World!", "#demo.innerHTML = \"Hello World!;\"", "document.getElementByNamw(\"p\").innerHTML = Hello World!"],
-        answer: "A"
+        question: "What is the correct JavaScript syntax to change the contact of the HTML element below?",
+        choices: ["A. document.getElementById(\"demo\").innerHTML = Hello World!", "B. document.getElement(\"p\").innerHTML = Hello World!", "C. #demo.innerHTML = \"Hello World!;\"", "D. document.getElementByNamw(\"p\").innerHTML = Hello World!"],
+        answer: "A. document.getElementById(\"demo\").innerHTML = Hello World!"
     },
     {
-        question5: "What is the correct HTML for referring to an external style sheet",
-        choices: ["<stylesheet>mystyles.css</stylesheet>", "<style src= \"mystyle.css\">", "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">"],
-        answer: "C"
+        question: "What is the correct HTML for referring to an external style sheet",
+        choices: ["A. <stylesheet>mystyles.css</stylesheet>", "B. <style src= \"mystyle.css\">", "C. <link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">", "D. <linkin rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">"],
+        answer: "C. <link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\""
 
         
     }
@@ -68,18 +67,58 @@ renderQuestion();
 
 function renderQuestion(){
     var q = questions[runningQuestion];
+    choices.innerHTML= "";
+    questionsElement.innerHTML = "<p>" + q.question + "</p>";
     for(var i=0; i < q.choices.length; i++){
+        console.log(q.choices[i]);
         
+        // choices.textContent =q.choices[i];
+        var p = document.createElement("p");
+        p.setAttribute('class',"choicesClass");
+        p.textContent = q.choices[i];
+        choices.append(p)
+       
     }
 
-    questionsElement.innerHTML = "<p>" + q.question1 + "</p>";
-    choiceA.innerHTML = "<p>" + q.choices + "</p>";
+
+//     console.log(q.question);
+        
+//     if(q.choices[0] === q.answer ){
+//         alert("correct");
+//    } else("wrong");
+
     
-    quiz.style.display= 'block';
+quiz.style.display= 'block';
    
 
     
 }
+
+document.addEventListener("click", function(){
+    if(event.target.matches("p")){
+        console.log(event.target.textContent);
+        if(event.target.textContent === questions[runningQuestion].answer ){
+            // alert("correct");
+            results.textContent = "Correct"
+            results.style.display= 'block';
+            runningQuestion++;
+
+            renderQuestion();
+
+        } else {
+            results.textContent = "Wrong"
+            results.style.display= 'block';
+            runningQuestion++;
+            // count = count - 6;
+            count -= 6;
+            renderQuestion();
+
+
+        };
+
+    }
+    
+})
 
 function setNextQuestion(){
 
@@ -102,16 +141,3 @@ function selectAnswer(){
 
 
 
-//startButton.classList.add('hide');
-// questionContaioner.classList.remove('hide');
-// timer.classList.remove ('hide');
-// nextBtn.classList.remove('hide');
-// introParagraph.classList.add('hide');
-
-// var startButton= document.querySelector('#start-button');
-// var questionContaioner= document.querySelector('#question-container');
-// var timer= document.querySelector('#count-down');
-// var nextBtn= document.querySelector('#next-button');
-// var introParagraph= document.querySelector('#intro');
-// var header= document.querySelector('#main');
-// var count= 3;
