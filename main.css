@@ -38,6 +38,10 @@ body{
 
 }
 
+#quiz{
+    cursor: pointer;
+}
+
 #intro{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 22px;
@@ -65,17 +69,22 @@ li{
     width: 31%;
     padding: 43px 11px;
     font-size: x-large;
-    background-color: rgb(228, 186, 186);
+    background-color: rgb(141, 98, 227);
+}
+
+.choicesClass{
+    background-color: #43bcb1eb;
+    color: white;
+    border-radius: 8px;
 }
 
 
-
-
-
-#next-button{
-    background-color: limegreen;
-    width: 18%;
-    padding: 5px;
+#nextBtn{
+    background-color:#ff5200;
+    color: white;
+    width: 24%;
+    padding: 7px;
+    float: right;
 }
 
 .button{
@@ -90,6 +99,17 @@ li{
 }
 .button:hover{
     border-color: black;
+}
+
+#correct{
+    color: green;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+#wrong{
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
 }
 
 .controls{
