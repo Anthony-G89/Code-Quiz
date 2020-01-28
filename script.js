@@ -8,9 +8,9 @@ var choicesClass = document.querySelector(".choicesClass");
 var correctElement = document.querySelector("#correct");
 var wrongElement = document.querySelector("#wrong");
 var nextElement = document.querySelector("#nextBtn");
-var correctOrWrong = "";
 var runningQuestion = 0;
-var count = 70;
+var count = 40;
+var highScores = [];
 
 
 var questions = [
@@ -31,8 +31,8 @@ var questions = [
     },
     {
         question: "What is the correct JavaScript syntax to change the contact of the HTML element below?",
-        choices: ["A. document.getElementById(\"demo\").innerHTML = Hello World!", "B. document.getElement(\"p\").innerHTML = Hello World!", "C. #demo.innerHTML = \"Hello World!;\"", "D.document.getElementByNamw(\"p\").innerHTML = Hello World!"],
-        answer: "A. document.getElementById(\"demo\").innerHTML = Hello World!"
+        choices: ["A. document.getElementById(\"demo\").innerHTML = \"Hello World\"", "B. document.getElement(\"p\").innerHTML = Hello World!", "C. #demo.innerHTML = \"Hello World!;\"", "D.document.getElementByNamw(\"p\").innerHTML = Hello World!"],
+        answer: "A. document.getElementById(\"demo\").innerHTML = \"Hello World\""
     },
     {
         question: "What is the correct HTML for referring to an external style sheet",
@@ -52,7 +52,9 @@ function startGame(){
 
      if(count === 0){
          clearInterval(interval);
+         score();
      };
+    
 },1000);
 
 start.style.display = 'none';
@@ -61,6 +63,13 @@ renderQuestion();
 }
 
 function renderQuestion(){
+    if(runningQuestion === questions.length){
+        clearInterval(interval);
+        score();
+        return;
+        
+    }
+
     var q = questions[runningQuestion];
     choices.innerHTML= "";
     questionsElement.innerHTML = "<p>" + q.question + "</p>";
@@ -70,6 +79,7 @@ function renderQuestion(){
         p.setAttribute('class',"choicesClass");
         p.textContent = q.choices[i];
         choices.append(p);
+    
 
     }
 
@@ -80,12 +90,12 @@ quiz.style.display= 'block';
 
 document.addEventListener("click", function(){
     if(event.target.matches("p")){
-        console.log(event.target.textContent);
+
         if(event.target.textContent === questions[runningQuestion].answer ){
             correctElement.textContent = "CORRECT"
             correctElement.style.display= 'block';
-            
             runningQuestion++;
+
 
         } else {
             wrongElement.textContent = "WRONG";
@@ -107,12 +117,29 @@ function nextquestion(){
     document.querySelector("#wrong").innerHTML = "";
 }
 
-function results(){
-  results.style.display="block";
-  renderQuestion();
+
+function score(){
+
+    quiz.style.display = "none";
+    results.style.display = "block";
+    
+    
+
 }
 
 
+document.querySelector("#submit").addEventListener("click", function(){
+        var initialsElm = document.querySelector("#initials");
+        var initials = initialsElm.value;
+        var score = count;
+        console.log(initials, score);
+        highScores.push({
+            initials: initials,
+            score: score
+        })
+        localStorage.setItem("highscores", JSON.stringify(highScores))
+        
+})
 
 
 

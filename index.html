@@ -8,14 +8,15 @@
     <link rel="icon" href="../Pictures/quiz-pic.jpg" type="img/gif" sizes="16x16">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="score.html">    
 
     <title>Code Quiz</title>
 </head>
 
 <body>
     <div id="timer"></div>
-    <div id="start" class="container btn btn" class="header">Start Quiz
+    <div id="start" class="container btn btn" class="header"><span id="main-header">Start Quiz</span>
         <h4 id="intro">Try to answer the following code related questions within the time limit.
             Keep in mind that incorrect answers will penalize your score time by six seconds.<br>May the force be with you!</h4>
     </div>
@@ -35,36 +36,16 @@
     
     </div>
 
-    <div id="results" style="display: none;">
-        <form action="">
-            Enter initial:<br>
-            <input type="text" name="" id="initials">
-        </form>
+    <div id="results" class="container" style="display: none;">
+        <div>
+            Enter Initials:
+            <input type="text" id="initials">
+            <button id="submit" type="submit">Submit</button></a>
+            
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
- <!-- <div class="container">
-        <h2 id="main">Code Quiz</h2>
-         <p id="intro">Try to answer the following code related questions within the time limit.
-             Keep in mind that incorrect answers will penalize your score time by six seconds.<br>My the force be with you!</p>
-        <div id="question-container" class="hide">
-            <div class="question">What does HTML stand for __________.</div>
-            <div id="answer-buttons">
-                <ul>
-                    <li><button class="button">Hypertext Markup Language</button></li>
-                    <li><button class="button">Hyper Mark Language</button></li>
-                    <li><button class="button">JSON</button></li>
-                    <li><button class="button">Height</button></li>
-                </ul>
-            </div>
-        </div>
-        <div class="controls">
-            <button id="start-button" class="start-button button">Start Quiz</button>
-            <button id="next-button" class="next-button button hide ">Next</button>
-        </div>
-
-
-    </div>     
-    <h3 id="count-down" class="hide">TIMER:</h3> -->
+ 
 </html>
