@@ -2,7 +2,9 @@
 
 ## User Story
 ```
-As a coding bootcamp student, I want to take a timed quiz on JavaScript fundamentals that stores high scores so that I can gauge my progress compared to my peers.
+AS A coding bootcamp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
 
 ```
 
@@ -13,13 +15,20 @@ You will have 40 seconds to answer 5 code questions. For each questions you get 
 
 ## Screenshots of  Applicaion
 ---
-![home] (/assets/codeQuiz.png);
+![results](/imgs/code_quiz.png)
+
+---
+![results](/imgs/code_quiz_questions.png);
+
 
 ## Table of Contents
 ```
  none
 
  ```
+ ## To build this website:
+
+I used jquery and bootstrap.
  
 
 
