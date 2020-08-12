@@ -9,31 +9,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="score.html">    
+    <link rel="stylesheet" href="score.html">
 
     <title>Code Quiz!</title>
 </head>
 
 <body>
     <div id="timer"></div>
-    <div id="start" class="container btn btn" class="header"><span id="main-header">Start Quiz</span>
+        <div id="start" class="container btn btn" class="header"><span id="main-header">Start Quiz</span>
         <h4 id="intro">Try to answer the following code related questions within the time limit.
-            Keep in mind that incorrect answers will penalize your score time by six seconds.<br>May the force be with you!</h4>
-    </div>
-    
+            Keep in mind that incorrect answers will penalize your score time by six seconds.<br>May the force be with
+            you!</h4>
+        </div>
+
 
     <div id="quiz" class="container" style="display: none;">
-    <div id="questions"></div>
-    <div id="controls">
-        <div class="choices"></div>
-        <div id="correct"></div>
-        <div id="wrong"></div>
-        <div id="next">
-            <button id="nextBtn" type="button">NEXT</button>
+        <div id="questions"></div>
+        <div id="controls">
+            <div class="choices"></div>
+            <div id="correct"></div>
+            <div id="wrong"></div>
+            <div id="next">
+                <button id="nextBtn" type="button">NEXT</button>
+            </div>
+
         </div>
-        
-    </div>
-    
+
     </div>
 
     <div id="results" class="container" style="display: none;">
@@ -41,11 +42,11 @@
             Enter Initials:
             <input type="text" id="initials">
             <button id="submit" type="submit">Submit</button></a>
-            
+
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
- 
+
 </html>

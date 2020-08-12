@@ -28,7 +28,7 @@ body{
 
 }
 #main-header{
-    color:#0dce25;
+    color: white;
     text-decoration: underline;
     font-size: 2em;
     font-family: fantasy;
@@ -50,7 +50,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 22px;
     font-weight: bold;
-    color: black;
+    color: white;
     margin-top: 14px;
 }
 
@@ -70,10 +70,11 @@ li{
 }
 
 #start{
-    width: 31%;
+    /* width: 31%; */
     padding: 43px 11px;
     font-size: x-large;
-    background-color: rgb(141, 98, 227);
+    background-color: #495057;
+    
     
 }
 
@@ -135,9 +136,11 @@ li{
 }
 
 #timer{
+    position: absolute;
+    top: 22px;
     color: red;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 90VH;
+    /* margin-bottom: 90VH; */
     
 }
