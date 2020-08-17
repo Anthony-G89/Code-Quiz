@@ -9,7 +9,7 @@ var correctElement = document.querySelector("#correct");
 var wrongElement = document.querySelector("#wrong");
 var nextElement = document.querySelector("#nextBtn");
 var runningQuestion = 0;
-var count = 90;
+var count = 50;
 var highScores = [];
 
 
