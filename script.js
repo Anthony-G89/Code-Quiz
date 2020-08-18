@@ -135,7 +135,7 @@ document.querySelector("#submit").addEventListener("click", function () {
     const initials = initialsElm.value.trim();
     const score = count;
 
-    if(initials === " ") {
+    if(initials === "") {
         alert("I pity the fool who doesn't put their initials");
         return ;
     }
