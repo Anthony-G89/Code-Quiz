@@ -10,6 +10,7 @@ var wrongElement = document.querySelector("#wrong");
 var nextElement = document.querySelector("#nextBtn");
 var initialsEl = document.querySelector("initials");
 var btnForHighScore = document.querySelector(".viewHighScore");
+var removeHighScore = document.querySelector("#clear");
 var runningQuestion = 0;
 var count = 50;
 var highScores = [];
@@ -134,7 +135,7 @@ document.querySelector("#submit").addEventListener("click", function () {
     const initials = initialsElm.value.trim();
     const score = count;
 
-    if(initials === "") {
+    if(initials === " ") {
         alert("I pity the fool who doesn't put their initials");
         return ;
     }

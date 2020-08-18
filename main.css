@@ -48,6 +48,7 @@ body{
 
 .viewHighScore {
     position: absolute;
+    border-radius: 9px;
     top: 13px;
     left: 26px;
 }
@@ -156,6 +157,7 @@ body{
 .HighscoreTitle {
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
+    font-weight: bold;
 }
 
 #highscore {
@@ -172,12 +174,29 @@ body{
 
 .goBackBtn {
     position: absolute;
+    border-radius: 9px;
     top: 20px;
     left: 32px;
-
 }
+
+#clear {
+    position: absolute;
+    border-radius: 10px;
+    top: 20px;
+    right: 32px;
+}
+
+li {
+    font-family: cursive;
+}
+
+li:nth-child(even) {
+    /* font-weight: bold; */
+
+  }
 
 
 li:nth-child(odd) {
-    background-color: lightblue;
+    background-color: #95cc29;
+    /* font-weight: bold; */
   }
