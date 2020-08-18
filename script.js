@@ -9,6 +9,7 @@ var correctElement = document.querySelector("#correct");
 var wrongElement = document.querySelector("#wrong");
 var nextElement = document.querySelector("#nextBtn");
 var initialsEl = document.querySelector("initials");
+var btnForHighScore = document.querySelector(".viewHighScore");
 var runningQuestion = 0;
 var count = 50;
 var highScores = [];
@@ -60,6 +61,8 @@ function startGame() {
 
     start.style.display = 'none';
 
+    btnForHighScore.style.display = "none";
+
     renderQuestion();
 }
 
@@ -94,13 +97,13 @@ document.addEventListener("click", function () {
 
         if (event.target.textContent === questions[runningQuestion].answer) {
             correctElement.textContent = "CORRECT"
-            correctElement.style.display = 'block';
+            correctElement.style.display = 'inline';
             runningQuestion++;
 
 
         } else {
             wrongElement.textContent = "WRONG";
-            wrongElement.style.display = 'block';
+            wrongElement.style.display = 'inline';
             runningQuestion++;
             count -= 6;
 
@@ -132,7 +135,7 @@ document.querySelector("#submit").addEventListener("click", function () {
     const score = count;
 
     if(initials === "") {
-        alert("I pity the fool who doesnt put their initials");
+        alert("I pity the fool who doesn't put their initials");
         return ;
     }
 

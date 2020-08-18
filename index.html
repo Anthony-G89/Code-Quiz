@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="../Pictures/quiz-pic.jpg" type="img/gif" sizes="16x16">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="score.html">
+    <link rel="stylesheet" href="highscore.html">
 
     <title>Code Quiz!</title>
 </head>
 
 <body>
     <div id="timer"></div>
+
+    <a href="highscore.html"><button class="viewHighScore">View Highscores</button></a>
     <div id="start" class="container btn btn" class="header"><span id="main-header">Start Quiz</span>
         <h4 id="intro">Try to answer the following code related questions within the time limit.
             Keep in mind that incorrect answers will penalize your score time by six seconds.<br>May the force be with
@@ -50,6 +51,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="score.js"></script>
 </body>
 
 </html>
