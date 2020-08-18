@@ -8,6 +8,7 @@ var choicesClass = document.querySelector(".choicesClass");
 var correctElement = document.querySelector("#correct");
 var wrongElement = document.querySelector("#wrong");
 var nextElement = document.querySelector("#nextBtn");
+var initialsEl = document.querySelector("initials");
 var runningQuestion = 0;
 var count = 50;
 var highScores = [];
@@ -65,10 +66,12 @@ function startGame() {
 function renderQuestion() {
     if (runningQuestion === questions.length) {
         clearInterval(interval);
-        score();
-        return;
 
-    }
+        const finalScore = document.getElementById("final-score");
+        finalScore.textContent = count;
+        score();
+    
+    };
 
     var q = questions[runningQuestion];
     choices.innerHTML = "";
@@ -79,13 +82,11 @@ function renderQuestion() {
         p.setAttribute('class', "choicesClass");
         p.textContent = q.choices[i];
         choices.append(p);
-
-
-    }
+    };
 
     quiz.style.display = 'block';
 
-}
+};
 
 
 document.addEventListener("click", function () {
@@ -122,24 +123,34 @@ function score() {
 
     quiz.style.display = "none";
     results.style.display = "block";
-
-
-
-}
+};
 
 
 document.querySelector("#submit").addEventListener("click", function () {
-    var initialsElm = document.querySelector("#initials");
-    var initials = initialsElm.value;
-    var score = count;
-    console.log(initials, score);
-    highScores.push({
-        initials: initials,
-        score: score
-    })
-    localStorage.setItem("highscores", JSON.stringify(highScores))
+    const initialsElm = document.querySelector("#initials");
+    const initials = initialsElm.value.trim();
+    const score = count;
 
-})
+    if(initials === "") {
+        alert("I pity the fool who doesnt put their initials");
+        return ;
+    }
+
+    const highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+
+    const newScore = {
+        score: score,
+        initials: initials
+    }
+
+    highscores.push(newScore);
+
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+      
+    window.location.href = "highscore.html";
+
+
+});
 
 
 
