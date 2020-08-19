@@ -17,16 +17,7 @@ body{
     background-image: url("./assets/email-pattern.png")
 }
 
-#main{
-    justify-content: center;
-    align-content: center;
-    display: flex;
-    margin-right: 12px;
-    margin-bottom: 45px;
-    border-bottom: 2px solid black;
-    color: blueviolet;
 
-}
 #main-header{
     color: white;
     text-decoration: underline;
@@ -46,11 +37,17 @@ body{
     cursor: pointer;
 }
 
+
 .viewHighScore {
     position: absolute;
     border-radius: 9px;
+    padding: 2px 7px;
     top: 13px;
     left: 26px;
+}
+
+.viewHighScore:hover {
+    color: blue;
 }
 
 #intro{
@@ -173,21 +170,33 @@ body{
 }
 
 .goBackBtn {
+    padding: 2px 7px;
+    cursor: pointer;
     position: absolute;
     border-radius: 9px;
     top: 20px;
     left: 32px;
 }
 
+.goBackBtn:hover {
+    color: blue;
+}
+
 #clear {
+    cursor: pointer;
     position: absolute;
+    padding: 2px 7px;
     border-radius: 10px;
     top: 20px;
     right: 32px;
 }
 
+#clear:hover {
+    color: blue;
+}
+
 li {
-    font-family: cursive;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
 }
 
 li:nth-child(even) {
