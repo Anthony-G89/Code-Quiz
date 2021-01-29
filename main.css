@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 *,
 *::before,
 *::after {
@@ -30,7 +33,17 @@ body{
     background-color: linen;
     border-radius: 15px;
     padding: 45px;
-    box-shadow: 5px 10px;
+    box-shadow: 9px 9px 12px;
+}
+
+
+@media only screen and (max-width: 499px)
+{
+    .container {
+        position: relative;
+        right: 5px;
+        width: 91%;
+    }
 }
 
 #quiz{
@@ -51,7 +64,7 @@ body{
 }
 
 #intro{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 38px;
     font-size: 22px;
     font-weight: bold;
@@ -76,7 +89,6 @@ body{
 
 
 #start{
-    /* width: 31%; */
     padding: 43px 11px;
     font-size: x-large;
     background-color: #495057;
@@ -155,6 +167,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 #highscore {
@@ -162,8 +175,37 @@ body{
     background-color: linen;
     border-radius: 15px;
     padding: 45px;
-    box-shadow: 5px 10px;
+    box-shadow: 5px 10px 12px;
 }
+
+@media only screen and (max-width: 499px) {
+    #highscore {
+        width: 91%;
+    }
+    .goBackBtn {
+        left: 7px;
+    }
+   
+}
+
+@media only screen and (max-width: 499px) {
+
+    .goBackBtn {
+        position: absolute;
+        left: 7px;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
 
 #userScore {
     text-align: center;

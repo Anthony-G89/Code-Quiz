@@ -93,28 +93,28 @@ function renderQuestion() {
 };
 
 
-document.addEventListener("click", function () {
+document.addEventListener("click", function (event) {
     if (event.target.matches("p")) {
 
         if (event.target.textContent === questions[runningQuestion].answer) {
-            correctElement.textContent = "CORRECT"
-            correctElement.style.display = 'inline';
             runningQuestion++;
-
-
+            correctElement.textContent = "CORRECT";
+            correctElement.style.display = 'inline-block';
+        
         } else {
+            runningQuestion++;
             wrongElement.textContent = "WRONG";
             wrongElement.style.display = 'inline';
-            runningQuestion++;
             count -= 6;
 
         };
-
     }
+
+    
 
 });
 
-nextElement.addEventListener("click", nextquestion)
+nextElement.addEventListener("click", nextquestion);
 
 function nextquestion() {
     renderQuestion();

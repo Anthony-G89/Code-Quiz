@@ -7,6 +7,7 @@ function printHighScore() {
 
     highScore.forEach(function (score) {
         const liTag = document.createElement("li");
+        console.log(score);
 
         liTag.textContent = score.initials + " your score is " + score.score + " points";
 
@@ -14,6 +15,8 @@ function printHighScore() {
 
         liElement.appendChild(liTag);
     });
+
+    
  
 };
 
