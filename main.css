@@ -186,6 +186,7 @@ body{
         left: 7px;
     }
    
+   
 }
 
 @media only screen and (max-width: 499px) {
@@ -197,12 +198,23 @@ body{
    
 }
 
+@media only screen and (max-width: 650px) {
 
+    .viewHighScore {
+       display: none;
+    }
+    #timer {
+        position: absolute;
+        top: 13px;
 
-
-
-
-
+    }
+    .container {
+        margin-top: 60px;
+        /* position: absolute;
+        left: 0; */
+    }
+   
+}
 
 
 
@@ -238,16 +250,15 @@ body{
 }
 
 li {
-    font-family:  Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-li:nth-child(even) {
-    /* font-weight: bold; */
+/* li:nth-child(even) {
+    font-weight: bold;
 
-  }
+  } */
 
 
 li:nth-child(odd) {
     background-color: #95cc29;
-    /* font-weight: bold; */
   }
