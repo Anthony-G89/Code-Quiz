@@ -126,15 +126,10 @@ document.addEventListener("click", function (event) {
 
 });
 
-// nextElement.addEventListener("click", nextquestion);
 
 function nextquestion() {
     renderQuestion();
-    
-    // document.querySelector("#feedback").innerHTML = "";
-
-    // document.querySelector("#feedback").innerHTML = "wrong";
-}
+};
 
 
 function score() {
