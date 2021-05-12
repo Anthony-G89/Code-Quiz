@@ -12,7 +12,7 @@ var initialsEl = document.querySelector("initials");
 var btnForHighScore = document.querySelector(".viewHighScore");
 var removeHighScore = document.querySelector("#clear");
 var runningQuestion = 0;
-var count = 50;
+var count = 60;
 var sfxRight = new Audio("../assets/sfx/correct.wav");
 var sfxWrong = new Audio("../assets/sfx/incorrect.wav");
 
