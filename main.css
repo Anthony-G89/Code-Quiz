@@ -203,8 +203,6 @@ li:nth-child(odd) {
 @media only screen and (max-width: 499px)
 {
     .container {
-        position: relative;
-        right: 5px;
         width: 91%;
     }
     .choicesClass {
