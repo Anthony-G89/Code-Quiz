@@ -5,14 +5,17 @@ var questionsElement = document.querySelector("#questions");
 var choices = document.querySelector(".choices");
 var results = document.querySelector("#results");
 var choicesClass = document.querySelector(".choicesClass");
-var correctElement = document.querySelector("#correct");
-var wrongElement = document.querySelector("#wrong");
-var nextElement = document.querySelector("#nextBtn");
+// var correctElement = document.querySelector("#correct");
+var feedBackElm = document.querySelector("#feedback");
+// var nextElement = document.querySelector("#nextBtn");
 var initialsEl = document.querySelector("initials");
 var btnForHighScore = document.querySelector(".viewHighScore");
 var removeHighScore = document.querySelector("#clear");
 var runningQuestion = 0;
 var count = 50;
+var sfxRight = new Audio("../assets/sfx/correct.wav");
+var sfxWrong = new Audio("../assets/sfx/incorrect.wav");
+
 var highScores = [];
 
 
@@ -74,12 +77,11 @@ function renderQuestion() {
         const finalScore = document.getElementById("final-score");
         finalScore.textContent = count;
         score();
-    
     };
 
     var q = questions[runningQuestion];
     choices.innerHTML = "";
-    questionsElement.innerHTML = "<p>" + q.question + "</p>";
+    questionsElement.innerHTML = "<p>" + q.question + "</p>"
     for (var i = 0; i < q.choices.length; i++) {
 
         var p = document.createElement("p");
@@ -94,32 +96,48 @@ function renderQuestion() {
 
 
 document.addEventListener("click", function (event) {
+    // console.log(event);
     if (event.target.matches("p")) {
 
         if (event.target.textContent === questions[runningQuestion].answer) {
+            feedBackElm.textContent = "CORRECT!";
+            $("#feedback").css("color", "green");
+            sfxRight.play();
+            // feedBackElm.style.display = 'inline-block';
             runningQuestion++;
-            correctElement.textContent = "CORRECT";
-            correctElement.style.display = 'inline-block';
-        
+            nextquestion()
         } else {
-            runningQuestion++;
-            wrongElement.textContent = "WRONG";
-            wrongElement.style.display = 'inline';
+            feedBackElm.textContent = "WRONG!";
+            $("#feedback").css("color", "red");
+            sfxWrong.play();
+            // feedBackElm.style.display = 'inline-block';
             count -= 6;
-
+            runningQuestion++;
+            nextquestion()
+           
         };
+    
     }
+
+    feedBackElm.setAttribute("class", "feedback");
+    setTimeout(function() {
+      feedBackElm.setAttribute("class", "feedback hide");
+    }, 1000)
+
+   
 
     
 
 });
 
-nextElement.addEventListener("click", nextquestion);
+// nextElement.addEventListener("click", nextquestion);
 
 function nextquestion() {
     renderQuestion();
-    document.querySelector("#correct").innerHTML = "";
-    document.querySelector("#wrong").innerHTML = "";
+    
+    // document.querySelector("#feedback").innerHTML = "";
+
+    // document.querySelector("#feedback").innerHTML = "wrong";
 }
 
 

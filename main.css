@@ -36,20 +36,9 @@ body{
     box-shadow: 9px 9px 12px;
 }
 
-
-@media only screen and (max-width: 499px)
-{
-    .container {
-        position: relative;
-        right: 5px;
-        width: 91%;
-    }
-}
-
 #quiz{
     cursor: pointer;
 }
-
 
 .viewHighScore {
     position: absolute;
@@ -82,12 +71,6 @@ body{
   
 }
 
-/* li{
-    list-style-type: upper-alpha;
-    color: black;
-} */
-
-
 #start{
     padding: 43px 11px;
     font-size: x-large;
@@ -102,9 +85,8 @@ body{
     border-radius: 8px;
 }
 
-
-
 #nextBtn{
+    /* display: none; */
     background-color:#ff5200;
     color: white;
     width: 24%;
@@ -159,8 +141,6 @@ body{
     color: red;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    /* margin-bottom: 90VH; */
-    
 }
 
 .HighscoreTitle {
@@ -177,51 +157,6 @@ body{
     padding: 45px;
     box-shadow: 5px 10px 12px;
 }
-
-@media only screen and (max-width: 499px) {
-    #highscore {
-        width: 91%;
-    }
-    .goBackBtn {
-        left: 7px;
-    }
-    .viewHighScore {
-        position: absolute;
-        left: 7px;
-     }
-   
-   
-}
-
-@media only screen and (max-width: 499px) {
-
-    .goBackBtn {
-        position: absolute;
-        left: 7px;
-    }
-   
-}
-
-@media only screen and (min-width:500px) and (max-width: 852px) {
-
-    .viewHighScore {
-       display: none;
-    }
-    #timer {
-        position: absolute;
-        top: 13px;
-
-    }
-    .container {
-        margin-top: 60px;
-        /* position: absolute;
-        left: 0; */
-    }
-   
-}
-
-
-
 
 #userScore {
     text-align: center;
@@ -266,3 +201,54 @@ li {
 li:nth-child(odd) {
     background-color: #95cc29;
   }
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 499px)
+{
+    .container {
+        position: relative;
+        right: 5px;
+        width: 91%;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    #highscore {
+        width: 91%;
+    }
+    .goBackBtn {
+        left: 7px;
+    }
+    .viewHighScore {
+        position: absolute;
+        left: 7px;
+     }
+}
+
+@media only screen and (max-width: 499px) {
+
+    .goBackBtn {
+        position: absolute;
+        left: 7px;
+    }
+   
+}
+
+@media only screen and (min-width:500px) and (max-width: 852px) {
+
+    .viewHighScore {
+       display: none;
+    }
+    #timer {
+        position: absolute;
+        top: 13px;
+
+    }
+    .container {
+        margin-top: 60px;
+    }
+}
+
+
