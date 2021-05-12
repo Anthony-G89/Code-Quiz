@@ -103,17 +103,15 @@ document.addEventListener("click", function (event) {
             feedBackElm.textContent = "CORRECT!";
             $("#feedback").css("color", "green");
             sfxRight.play();
-            // feedBackElm.style.display = 'inline-block';
             runningQuestion++;
-            nextquestion()
+            nextquestion();
         } else {
             feedBackElm.textContent = "WRONG!";
             $("#feedback").css("color", "red");
             sfxWrong.play();
-            // feedBackElm.style.display = 'inline-block';
             count -= 6;
             runningQuestion++;
-            nextquestion()
+            nextquestion();
            
         };
     
