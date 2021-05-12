@@ -38,7 +38,7 @@ var questions = [
     {
         question: "What is the correct JavaScript syntax to change the contact of the HTML element below?",
         choices: ["A. document.getElementById(\" demo \").innerHTML = \" Hello World \"", "B. document.getElement(\" p \").innerHTML = Hello World ", "C. #demo.innerHTML = \" Hello World \"", "D.document.getElementByNamw(\" p \").innerHTML = Hello World "],
-        answer: "A. document.getElementById(\"demo\").innerHTML = \"Hello World\""
+        answer: "A. document.getElementById(\" demo \").innerHTML = \" Hello World \""
     },
     {
         question: "What is the correct HTML for referring to an external style sheet",
