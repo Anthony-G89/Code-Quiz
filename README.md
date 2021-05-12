@@ -35,7 +35,6 @@ ANTHONY GUERRERO
 N/A
 ## Contributing
 N/A
-
  ## Tests
  N/A
  ## Questions
