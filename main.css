@@ -105,15 +105,9 @@ body{
     font-weight: bold;
 }
 
-#correct{
-    color: green;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
-}
-#wrong{
-    color: red;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
+.choicesClass {
+    font-size: 20px;
+    padding: 2;
 }
 
 .controls{
@@ -211,6 +205,11 @@ li:nth-child(odd) {
         position: relative;
         right: 5px;
         width: 91%;
+    }
+    .choicesClass {
+        font-size: 17px;
+        line-break: anywhere;
+        padding: 10px;
     }
 }
 

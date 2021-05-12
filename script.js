@@ -37,7 +37,7 @@ var questions = [
     },
     {
         question: "What is the correct JavaScript syntax to change the contact of the HTML element below?",
-        choices: ["A. document.getElementById(\"demo\").innerHTML = \"Hello World\"", "B. document.getElement(\"p\").innerHTML = Hello World!", "C. #demo.innerHTML = \"Hello World!;\"", "D.document.getElementByNamw(\"p\").innerHTML = Hello World!"],
+        choices: ["A. document.getElementById(\" demo \").innerHTML = \" Hello World \"", "B. document.getElement(\" p \").innerHTML = Hello World ", "C. #demo.innerHTML = \" Hello World \"", "D.document.getElementByNamw(\" p \").innerHTML = Hello World "],
         answer: "A. document.getElementById(\"demo\").innerHTML = \"Hello World\""
     },
     {
@@ -122,7 +122,7 @@ document.addEventListener("click", function (event) {
     feedBackElm.setAttribute("class", "feedback");
     setTimeout(function() {
       feedBackElm.setAttribute("class", "feedback hide");
-    }, 1000)
+    }, 1500)
 
    
 
