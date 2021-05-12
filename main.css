@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Poppins', sans-serif;
   font-size: large;
 }
 
@@ -22,7 +21,7 @@ body{
 
 
 #main-header{
-    color: white;
+    color: black;
     text-decoration: underline;
     font-size: 2em;
     font-family: fantasy;
@@ -30,13 +29,10 @@ body{
 
 .container{
     width: 500px;
-    background-color: linen;
+    background-color: #e5e9ec;
     border-radius: 15px;
     padding: 45px;
-    box-shadow: 9px 9px 12px;
-}
-
-#quiz{
+    box-shadow: 18px 25px 12px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 
@@ -56,8 +52,7 @@ body{
     font-family: 'Poppins', sans-serif;
     line-height: 38px;
     font-size: 22px;
-    font-weight: bold;
-    color: white;
+    color: black;
     margin-top: 14px;
 }
 
@@ -74,7 +69,7 @@ body{
 #start{
     padding: 43px 11px;
     font-size: x-large;
-    background-color: #495057;
+    background-color: #e5e9ec;
     
     
 }
@@ -83,15 +78,6 @@ body{
     background-color: #43bcb1eb;
     color: white;
     border-radius: 8px;
-}
-
-#nextBtn{
-    /* display: none; */
-    background-color:#ff5200;
-    color: white;
-    width: 24%;
-    padding: 7px;
-    float: right;
 }
 
 .button{
@@ -149,7 +135,7 @@ body{
     background-color: linen;
     border-radius: 15px;
     padding: 45px;
-    box-shadow: 5px 10px 12px;
+    box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.6); 
 }
 
 #userScore {
@@ -175,7 +161,7 @@ body{
     padding: 2px 7px;
     border-radius: 10px;
     top: 20px;
-    right: 32px;
+    right: 9px;
 }
 
 #clear:hover {
@@ -198,43 +184,6 @@ li:nth-child(odd) {
 
 
 /* Media Queries */
-
-@media only screen and (max-width: 499px)
-{
-    .container {
-        position: relative;
-        right: 5px;
-        width: 91%;
-    }
-    .choicesClass {
-        font-size: 17px;
-        line-break: anywhere;
-        padding: 10px;
-    }
-}
-
-@media only screen and (max-width: 499px) {
-    #highscore {
-        width: 91%;
-    }
-    .goBackBtn {
-        left: 7px;
-    }
-    .viewHighScore {
-        position: absolute;
-        left: 7px;
-     }
-}
-
-@media only screen and (max-width: 499px) {
-
-    .goBackBtn {
-        position: absolute;
-        left: 7px;
-    }
-   
-}
-
 @media only screen and (min-width:500px) and (max-width: 852px) {
 
     .viewHighScore {
@@ -250,4 +199,32 @@ li:nth-child(odd) {
     }
 }
 
+
+@media only screen and (max-width: 499px)
+{
+    .container {
+        position: relative;
+        right: 5px;
+        width: 91%;
+    }
+    .choicesClass {
+        font-size: 17px;
+        line-break: anywhere;
+        padding: 10px;
+    }
+    #highscore {
+        width: 91%;
+    }
+    .goBackBtn {
+        left: 7px;
+    }
+    .viewHighScore {
+        position: absolute;
+        left: 7px;
+     }
+     .goBackBtn {
+        position: absolute;
+        left: 7px;
+    }
+}
 

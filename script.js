@@ -21,12 +21,12 @@ var highScores = [];
 
 var questions = [
     {
-        question: "What does HTML stand for __________.",
+        question: "What does HTML stand for: ",
         choices: ["A. Hypertext Markup Language", "B. Hyper Mark Language", "C. JSON", "D. Height"],
         answer: "A. Hypertext Markup Language"
     },
     {
-        question: "What does CSS stand for _____________.",
+        question: "What does CSS stand for: ",
         choices: ["A. Cascading Style Sheets", "B. Cascading Sheets Style", "C. Cascading Sheep style", "D. Computer Style Sheets"],
         answer: "A. Cascading Style Sheets"
     },
