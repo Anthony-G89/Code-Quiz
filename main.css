@@ -32,7 +32,7 @@ body{
     background-color: #e5e9ec;
     border-radius: 15px;
     padding: 45px;
-    box-shadow: 18px 25px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
@@ -42,7 +42,7 @@ body{
     padding: 2px 7px;
     top: 13px;
     left: 26px;
-    box-shadow: 7px 8px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 .viewHighScore:hover {
@@ -97,16 +97,6 @@ body{
     padding: 2;
 }
 
-/* #feedback::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 30%;
-    height: 2px;
-    background-color: rgb(228, 141, 141);
-
-
-} */
 
 .controls{
     padding-top: 35px;
@@ -146,10 +136,10 @@ body{
 
 #highscore {
     width: 500px;
-    background-color: linen;
+    background-color: #e5e9ec;
     border-radius: 15px;
     padding: 45px;
-    box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.6); 
+    box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 #initials {
@@ -167,7 +157,7 @@ body{
     border-radius: 9px;
     top: 20px;
     left: 32px;
-    box-shadow: 7px 8px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 .goBackBtn:hover {
@@ -181,7 +171,7 @@ body{
     border-radius: 10px;
     top: 20px;
     right: 9px;
-    box-shadow: 7px 8px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 #clear:hover {
@@ -198,7 +188,7 @@ li {
   } */
 
 li:nth-child(odd) {
-    background-color: #95cc29;
+    background-color: #49cbf2;
   }
 
 

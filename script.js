@@ -57,8 +57,7 @@ function startGame() {
         if (count === 0) {
             clearInterval(interval);
             score();
-        };
-
+        };      
     }, 1000);
 
     start.style.display = 'none';
@@ -72,8 +71,8 @@ function renderQuestion() {
     if (runningQuestion === questions.length) {
         clearInterval(interval);
 
-        const finalScore = document.getElementById("final-score");
-        finalScore.textContent = count;
+        // const finalScore = document.getElementById("final-score");
+        // finalScore.textContent = count;
         score();
     };
 
