@@ -97,6 +97,17 @@ body{
     padding: 2;
 }
 
+/* #feedback::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30%;
+    height: 2px;
+    background-color: rgb(228, 141, 141);
+
+
+} */
+
 .controls{
     padding-top: 35px;
 }
@@ -106,8 +117,10 @@ body{
 }
 
 #submit{
+    position: relative;
+    top: 11px;
     color: white;
-    background-color: #ff5200;
+    background-color: black;
 }
 
 .hide{
